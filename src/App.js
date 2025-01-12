@@ -10,7 +10,7 @@ const App = () => {
 ------------------------------------------------------------------------------------------------ */
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
-  const [filters, setFilters] = useState({ dateRange: [2020, 2024], revenue: [0, Infinity], netIncome: [0, Infinity] });
+  const [filters, setFilters] = useState({ dateRange: [2020, 2024], revenue: [0, 5000000000000], netIncome: [0, 5000000000000] });
   const [sortConfig, setSortConfig] = React.useState(null);
 
 /*------------------------------------------------------------------------------------------------
@@ -74,9 +74,9 @@ const App = () => {
   }, [filters, data]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-100 p-8">
-      <div className="max-w-7xl mx-auto bg-white rounded-lg shadow-lg p-6">
-        <h1 className="text-2xl font-bold text-green-800 mb-6 text-center">Financial Data Filtering App</h1>
+    <div className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-100 p-4 sm:p-8">
+      <div className="max-w-7xl mx-auto bg-white rounded-lg shadow-lg p-4 sm:p-6">
+        <h1 className="text-xl sm:text-2xl font-bold text-green-800 mb-4 text-center">Financial Data Filtering App</h1>
         <Filters filters={filters} setFilters={setFilters} />
         <div className="overflow-x-auto">
           <Table data={filteredData} onSort={onSort} />

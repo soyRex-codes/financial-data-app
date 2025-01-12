@@ -12,7 +12,7 @@ const Filters = ({ filters, setFilters }) => {
 Input field for Date range, Revenue Range, NetIncome Range
 -----------------------------------------------------------------------------------------------------*/
   return (
-    <div className="mb-3 space-y-2 bg-white border border-gray-300 rounded-lg p-4">
+    <div className="mb-3 space-y-2 bg-white border border-gray-300 rounded-lg p-3 sm:p-4">
       <div>
       <label className="block text-sm font-medium text-gray-700">Date Range (e.g., 2020,2024):</label>
         <input
@@ -20,7 +20,7 @@ Input field for Date range, Revenue Range, NetIncome Range
           name="dateRange"
           value={filters.dateRange}
           onChange={handleInputChange}
-          className="bg-green-50 border border-green-500 p-2 rounded-lg w-50%" //input field Green
+          className="bg-green-50 border border-green-500 p-2 rounded-lg w-full sm:w-1/2" //input field Green
         />
       </div>
       <div>
@@ -30,7 +30,7 @@ Input field for Date range, Revenue Range, NetIncome Range
           name="revenue"
           value={filters.revenue}
           onChange={handleInputChange}
-          className="bg-green-50 border border-green-500 p-2 rounded-lg w-50%"
+          className="bg-green-50 border border-green-500 p-2 rounded-lg w-full sm:w-1/2"
         />
       </div>
       <div>
@@ -40,7 +40,7 @@ Input field for Date range, Revenue Range, NetIncome Range
           name="netIncome"
           value={filters.netIncome}
           onChange={handleInputChange}
-          className="bg-green-50 border border-green-500 p-2 rounded-lg w-50%"
+          className="bg-green-50 border border-green-500 p-2 rounded-lg w-full sm:w-1/2"
         />
       </div>
     </div>
