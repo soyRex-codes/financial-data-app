@@ -10,7 +10,7 @@ const App = () => {
 ------------------------------------------------------------------------------------------------ */
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
-  const [filters, setFilters] = useState({ dateRange: [2020, 2024], revenue: [0, 5000000000000], netIncome: [0, 5000000000000] });
+  const [filters, setFilters] = useState({ dateRange: [2020, 2024], revenue: [0, Infinity], netIncome: [0, Infinity] });
   const [sortConfig, setSortConfig] = React.useState(null);
 
 /*------------------------------------------------------------------------------------------------
