@@ -5,17 +5,25 @@ import Filters from './components/Filters';
 import './index.js';
 
 const App = () => {
+  /*------------------------------------------------------------------------------------------------
+//Initializing features
+------------------------------------------------------------------------------------------------ */
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [filters, setFilters] = useState({ dateRange: [2020, 2024], revenue: [0, Infinity], netIncome: [0, Infinity] });
   const [sortConfig, setSortConfig] = React.useState(null);
 
-
+/*------------------------------------------------------------------------------------------------
+//SORTING FEATURE
+------------------------------------------------------------------------------------------------ */
   const onSort = (key) => {
-  let direction = 'ascending';
+  let direction = 'ascending'; //This line initializes a variable called direction with the default sorting direction as "ascending".
+  /* sortConfig: This is assumed to be an object containing information about the currently active sort, including the column key (sortConfig.key) and its sorting direction (sortConfig.direction).
+     sortConfig.key === key: This checks if the currently clicked column (key) matches the column that is already being sorted (sortConfig.key).
+     sortConfig.direction === 'ascending': This further checks if the current sorting direction for that column is "ascending".*/
   if (sortConfig && sortConfig.key === key && sortConfig.direction === 'ascending') {
-    direction = 'descending';
-  }
+    direction = 'descending'; //If the conditions inside the if statement are true (meaning the user clicked on the same column that is already sorted ascending), then the direction variable is set to "descending", effectively switching the sorting direction.
+  } //the below code sorts and return sorted data, simply like a template for sorting
   setSortConfig({ key, direction });
 
   const sortedData = [...filteredData].sort((a, b) => {
@@ -26,7 +34,9 @@ const App = () => {
   setFilteredData(sortedData);
 };
 
-
+/*------------------------------------------------------------------------------------------------
+//fetching data from API
+------------------------------------------------------------------------------------------------ */
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -45,7 +55,9 @@ const App = () => {
 
 
   
-  // Apply filters whenever `filters` or `data` changes
+  /*------------------------------------------------------------------------------------------------
+//FILTERS
+------------------------------------------------------------------------------------------------ */
   useEffect(() => {
     const filtered = data.filter(item => {
       const dateYear = parseInt(item.date.split('-')[0]);
@@ -62,10 +74,14 @@ const App = () => {
   }, [filters, data]);
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Financial Data Filtering App</h1>
-      <Filters filters={filters} setFilters={setFilters} />
-      <Table data={filteredData} onSort={onSort} />
+    <div className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-100 p-8">
+      <div className="max-w-7xl mx-auto bg-white rounded-lg shadow-lg p-6">
+        <h1 className="text-2xl font-bold text-green-800 mb-6 text-center">Financial Data Filtering App</h1>
+        <Filters filters={filters} setFilters={setFilters} />
+        <div className="overflow-x-auto">
+          <Table data={filteredData} onSort={onSort} />
+        </div>
+      </div>
     </div>
   );
 };

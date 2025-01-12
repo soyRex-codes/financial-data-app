@@ -3,7 +3,9 @@ const Table = ({ data, onSort, sortConfig }) => {
   const handleSort = (key) => {
     onSort(key);
   };
-
+/*------------------------------------------------------------------------------------------------
+//TABLE HEADINGS Date, REVENUE, NETINCOME ETC.. , SORTING FEATURE CALLED USING handlesort EVEYRTIME WHEN CLICKED ON this symbol in the table ↑↓
+------------------------------------------------------------------------------------------------ */
   return (
     <table className="min-w-full table-auto border-collapse border border-gray-200">
       <thead>
