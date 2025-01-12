@@ -31,7 +31,7 @@ const App = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          //'https://financialmodelingprep.com/api/v3/income-statement/AAPL?period=annual&apikey=VYEBfVCBhvFO6upK9ADqrjdWdBJo8bEY'
+          //'https://financialmodelingprep.com/api/v3/income-statement/AAPL?period=annual&apikey=APIKEY'
         );
         console.log(response.data); // Log API response
         setData(response.data);
