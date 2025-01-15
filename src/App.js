@@ -76,7 +76,9 @@ const App = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-100 p-4 sm:p-8">
       <div className="max-w-7xl mx-auto bg-white rounded-lg shadow-lg p-4 sm:p-6">
-        <h1 className="text-xl sm:text-2xl font-bold text-green-800 mb-4 text-center">Financial Data Filtering App</h1>
+        <h1 className="text-xl sm:text-3xl font-bold text-green-800 mb-4 text-center">Investors Friend</h1>
+        <h3 className="text-xl sm:text-xl font-bold text-red-600 mb-4 text-center">Watch & Filter Decades of Stock Data, Investing Made Easy</h3>
+        <h2 className="text-xl sm:text-1xl font-bold text-blue-800 mb-4">Stock Data: AAPL(Apple)</h2>
         <Filters filters={filters} setFilters={setFilters} />
         <div className="overflow-x-auto">
           <Table data={filteredData} onSort={onSort} />
