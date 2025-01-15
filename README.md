@@ -1,3 +1,31 @@
+Project_Live on: https://financial-data-app-mu.vercel.app/
+React version used:18.0.0
+Features: 
+1.	The sorting feature works directly, when clicked on (↑↓) this symbol the column will sort itself ascending/descending.
+2.	Range feature works when the range is entered e.g: for the date range in years(2020-2024)
+Please install the necessary libraries & scripts if not already on your system.
+1.	(optional) You can find necessary libraries and scripts that are used with their version for compatibility inside the Folder financial-data-app\package.json
+Mainly:
+1.	Clone the Repo from GITHUB: https://github.com/soyRex-codes/financial-data-app
+2.	To Run, make sure you have react 18 installed. Open the Folder in your Vs code or any IDE you are using .
+3.	Please Make sure you are in financial-data-app folder if not, go to main folder by typing cd financial-data-app in your IDE terminal.
+4.	Install TailwindCSS if not already installed using:
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+5.	Install Axios for API calls: npm install axios
+6.	To start the react server on your system, open the terminal, and type: npm start
+7.	If run success, enjoy
+8.	 
+9.	Thankyou 😊, if any questions, please email me at rajkushwaha0213@gmail.com
+
+
+
+
+
+
+
+More to read:
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
